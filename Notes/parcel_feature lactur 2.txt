@@ -1,0 +1,34 @@
+with package-lock-json i can produce same nade-module no matter how big it is
+we can import React using cdn 
+tilde and caret
+npx means npm execute
+   <<<<  parcel features   >>>>>
+
+parcel is hot module reload(parcel keep a track of all the file) it does not reload the whole code it only changes those which need to be change
+there is something knoen as file watcher algorithm this is written c++
+-parcle .cache only changs that we have done it does not change the whole code
+dist folder keep the minified verson of files
+parcel do code minification
+parcel help in cleaning the code
+it remove all the console log file
+parcel all do media(images, video) minification
+dev and production build
+parcel do caching by devlopment
+.parcel-cache
+compressions(rename the variabl)
+older version of variable
+it add polyfills
+parcel give us the functionalities to build our app on https on devlopment for that we have to rum "npx parcel index.html --https"
+
+parcel manage port n.O
+we have to parcel.cacheparcel using consistant hashing algorithm
+
+transitive dependencies are those dependencies with sub dependencies
+
+pls refer to parceljs.org
+
+how to make our app compatable with older browser for this we use browserslist
+
+
+
+
