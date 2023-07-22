@@ -1,0 +1,63 @@
+ lacture 3 key points 
+ in this lacture we will going to learn about jsx (javascript Xml )
+  Polyfill: A code is replacement that a replacement for a new version of code 
+   there is replacement code that is compatable with older version it babel that do it
+
+   babael is just a javascript package it is taking some and give some other code
+Tree Shaking : Remove unwanted code (parcel done this)
+parcel remove all the unwantedcode
+
+Parcel also remove console.log()
+we have configured our project for that we use "babel pluin transform remove console"
+ --save-dev ==== -D
+if there are multiple child so to distuingh we use keys so that it will be easy for react
+rander: updating something in dom
+React.createElement is creang an object which is then converted to html/dom
+//jsx syntax
+cosnt heading= <h1 id ="" key ="" >  </h1>
+above one is not a sting and 
+react track uniquness using key
+jsx is not html inside javascript 
+jsx is fancy way for writing html
+jsx uses React.createElement behind the scene
+
+Babel comes with parcel
+
+  <----------------------------------- Components ---------------------------------------------------->
+
+
+Every thing in react is a componenets
+navbar is componeent footer header body cards every thing is components
+
+there are two type of f components
+1.. functional componenets
+2. class Based componenets
+
+function componenet is nothing but a components
+it return some pieace og jsx
+ Arrow function
+cosnt header =()=>{
+
+   return  (
+      <h1> functional react component</h1>
+   )
+
+}
+if there are multiple line in functional components then we have wrap it up in ()
+it is not compulsory to write return in functional componenets
+// normal function
+cosnt header=function(){
+
+}
+ if we have render functional component inside functional component then
+ <nameofElement />
+ {nameofreactElament}
+ {nameofcomponenet()}
+
+ React prevent from cross xml attck
+
+ sanitization
+
+ componennt composition when 
+
+
