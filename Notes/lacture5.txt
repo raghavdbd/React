@@ -1,0 +1,40 @@
+--------------------------------------------- lacture 5 ----------------------------------------------------------------------------
+
+React file structure
+
+
+import Tilte from path of that file
+
+
+there are two ways of export
+1. Export Default
+we can export only one file using Default
+if we want to export multiple things then export directly
+(export by name)
+import {title} from path_of_file   //
+
+
+if there are multiple name export then we can import then by
+
+import * as xyz from 
+xyz.header
+
+in named export name should be same
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Quesation from lacture 5 
+

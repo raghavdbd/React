@@ -1,30 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom/client"
+export const IMG_CDN_URL="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"
 
-
-const Title=()=>{
-    return (
-    
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvTiYvL2R6PNlChsx7LeLbHF23-Fn9MXctMg&usqp=CAU" alt="logo" id="logo" />
-    
-    )
-}
-const Header=()=>{
-    return (
-        <div className="header">
-            <Title />
-            <div id="headercomponents">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    );
-    };
-    const restrurentlist=
+export const restrurentlist=
 [
     {
         "type": "restaurant",
@@ -728,68 +704,3 @@ const Header=()=>{
         "subtype": "basic"
       }
 ]
-
-const Card =({name,cuisines,cloudinaryImageId,avgRating})=>{
-  // destructuring restrurent list
-
- 
-    return(
-  <div className="cards">
-  <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId} alt="restrurnt image" id="img"/>
-        <h1>{name}</h1>
-        <h3>{cuisines.join(",")}</h3>
-        <h4>{avgRating}</h4>
-  </div>
-       
-        
-    );
-
-
-};
-
-const Body = () =>{
-return (
-  // here we are passing arguments which is props 
-    <div id="Restrurent">
-      {
-        restrurentlist.map(restaurant =>{
-        return   <Card {...restaurant.data} key={restaurant.data.id}/>
-
-
-        })
-      }
-        {/* <Card restaurant ={restrurentlist[0].data} />
-        <Card restaurant ={restrurentlist[1].data} />
-        <Card  restaurant ={restrurentlist[2].data}/>
-        <Card  restaurant ={restrurentlist[3].data}/>
-        <Card restaurant ={restrurentlist[4].data}/>
-        <Card restaurant ={restrurentlist[5].data}/>
-         */}
-        
-    </div>
-)
-
-}
-
-const Footer=()=>{
-    return(
-      <h1>Footer</h1>
-    )
-
-
-}
-
-const applayout =()=>{
-    return(
-        <>
-        <Header />
-        <Body />
-        <Footer />
-
-        </>
-    )
-}
-const root=ReactDOM.createRoot(document.getElementById("root"));
-root.render(applayout())
-
-
