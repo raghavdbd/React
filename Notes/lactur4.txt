@@ -1,0 +1,82 @@
+<-------------------------------------- key learning from lacture 4 ----------------------------------------------------->
+
+now from thsi lacture we are going to make a food ordering Aap
+Always first make a structing what you are going to build
+
+we should have only one parent element in functional component but if we want to use multiple parent component we can use React.fragment
+
+there are two way of using it
+1. <React.fragment></React.fragment>
+2.<></>
+we need to put our code inside this
+
+how to give style inside my react
+
+cosnt styleobj={
+    background-color=black
+}
+const jsx=()=>{
+    <h1 stile={styleobj}></h1>
+}
+
+if there is array then we have to use .join(",")
+
+
+whatever we passes as an attribute it is known a s props (property)
+
+we can destructure ove fly
+
+... Es 6 spread operator
+in functional programming we don't use for loop we use map
+map is the best way to do functional programming
+
+we make our site using config driven api
+
+----------------------------------------<virtual dom ---------------------------------------------------
+
+virtual dom is representation of actual dom
+virtual dom is software engineering conscept which we use it multiple places
+virtual dom used diff algorithm
+we need virtual dom for reconciliation
+it tell what need to change what need not to
+React uses key for diff algorithm
+ so it compulsory to pass key 
+ if we don't use key then react willl rerender everything
+
+
+virtual dom ques
+1. what is virtual dom
+2. what is reconciliation
+3. what is diff algorithm
+4. why we use key
+5. what is React .fragment
+6. what are the type of components
+7. what is use of babael
+8.syntax of functional component,
+9. syntax of React Elament
+10. what is config driven ui
+11.how to render one functional component into other functional component
+12. can there be multiple parent in functional component
+13. what is spread operator in Es6 and what is the use of it
+14. what react fibre in react 16
+15 what is map and how we use it
+
+
+
+
+
+
+
+It is not recommended to use the index of the array as the key prop if you know the array will not be static. If the key is an index, reordering an item in the array changes it. Then React will get confused and re-render the incorrect element
+
+
+
+
+
+
+
+
+
+
+
+
