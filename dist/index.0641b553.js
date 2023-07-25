@@ -27441,28 +27441,88 @@ var _react = require("react");
 var _config = require("../config");
 var _cards = require("./Cards");
 var _cardsDefault = parcelHelpers.interopDefault(_cards);
+var _s = $RefreshSig$();
+// make a filter function 
+// This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
+//  after that we are filter function which filter on the basis of searchtxt from restaurents.data.name and then return the filter data 
+function filter(searchtxt, restaurants) {
+    const filterdata = restaurants.filter((restaurant)=>restaurant.data.name.includes(searchtxt));
+    return filterdata;
+}
 const Body = ()=>{
-    return(// here we are passing arguments which is props 
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        id: "Restrurent",
-        children: (0, _config.restrurentlist).map((restaurant)=>{
-            return /*#__PURE__*/ (0, _react.createElement)((0, _cardsDefault.default), {
-                ...restaurant.data,
-                key: restaurant.data.id,
-                __source: {
+    _s();
+    const [restaurants, setrestaurants] = (0, _react.useState)((0, _config.restrurentlist));
+    const [searchtxt, setsearchtxt] = (0, _react.useState)();
+    //  heare we have create a handle search which chech if search text is empty then it shows no result fount
+    const handleSearch = ()=>{
+        if (searchtxt) {
+            // If searchtxt is not empty, apply the filter function to get the filtered data
+            const data = filter(searchtxt, (0, _config.restrurentlist));
+            setrestaurants(data);
+        } else // If searchtxt is empty, restore the original data
+        setrestaurants((0, _config.restrurentlist));
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        placeholder: "Search",
+                        value: searchtxt,
+                        onChange: (e)=>{
+                            setsearchtxt(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 28,
+                        columnNumber: 8
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "Search-btn",
+                        onClick: handleSearch,
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 31,
+                        columnNumber: 8
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 26,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "Restrurent",
+                children: restaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: "No Result Found"
+                }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 8,
-                    columnNumber: 16
-                },
-                __self: undefined
-            });
-        })
-    }, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 6,
-        columnNumber: 5
-    }, undefined));
+                    lineNumber: 46,
+                    columnNumber: 41
+                }, undefined) : restaurants.map((restaurant)=>{
+                    return /*#__PURE__*/ (0, _react.createElement)((0, _cardsDefault.default), {
+                        ...restaurant.data,
+                        key: restaurant.data.id,
+                        __source: {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 47,
+                            columnNumber: 16
+                        },
+                        __self: undefined
+                    });
+                })
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 44,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true);
 };
+_s(Body, "VFZw3Z+2SEz1RCZVXaQyL4zBVeA=");
 _c = Body;
 exports.default = Body;
 var _c;
