@@ -1,30 +1,60 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { restrurentlist } from "../config"
 import Card from "./Cards"
 // make a filter function 
 // This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
 //  after that we are filter function which filter on the basis of searchtxt from restaurents.data.name and then return the filter data 
-function filter(searchtxt,restaurants){
+function filter(searchtxt,allrestarurent){
 
-const filterdata = restaurants.filter((restaurant) =>
-restaurant.data.name.includes(searchtxt)
+const filterdata = allrestarurent.filter((restaurant) =>
+restaurant?.data?.name?.toLowerCase()?.includes(searchtxt.toLowerCase())
 );
 return filterdata;
 }
+
+
+// now we write code for body
 const Body = () =>{
-    const [restaurants,setrestaurants]= useState(restrurentlist)
-    const [searchtxt,setsearchtxt]=useState();
+
+    //  here we kept two copy of restrurent list
+    const [allrestarurent,setallrestaurent]=useState();
+    //  here we are creating state variable 
+    const [filterdrestaurants,setFilteredrestaurants]= useState([])
+    const [searchtxt,setsearchtxt]=useState([]);
+
+    //  we are using use-effect for fetching api as we want fetch the api only once 
+    useEffect(() =>{
+        getRestrurent();
+ },[])
+   
+ 
+ //  below function is for api call as we are using Swiggy public api for fetching data
+    async function getRestrurent(){
+        const data=await fetch(
+        
+            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9315929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+
+       )
+       const json=await data.json();
+    //    opetional chaining
+    setallrestaurent(json?.data?.cards[2]?.data?.data?.cards);
+   setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
+
+    }
+   
     //  heare we have create a handle search which chech if search text is empty then it shows no result fount
     const handleSearch = () => {
         if (searchtxt) {
           // If searchtxt is not empty, apply the filter function to get the filtered data
-          const data = filter(searchtxt, restrurentlist);
-          setrestaurants(data);
+          const data = filter(searchtxt, allrestarurent);
+          setFilteredrestaurants(data);
         } else {
           // If searchtxt is empty, restore the original data
-          setrestaurants(restrurentlist);
+          setFilteredrestaurants(allrestarurent);
         }
       };
+
+
     return (
         <>
         <div className="search">
@@ -57,12 +87,12 @@ const Body = () =>{
       
         <div id="Restrurent">
           
-            {restaurants.length ===0 ?(
+            {filterdrestaurants.length ===0 ?(
                 <p>No Result Found</p>
 
 
             ):(
-                restaurants.map(restaurant =>{
+                filterdrestaurants.map(restaurant =>{
                     return   <Card {...restaurant.data} key={restaurant.data.id}/>
                     
             

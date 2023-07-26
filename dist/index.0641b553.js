@@ -27445,22 +27445,38 @@ var _s = $RefreshSig$();
 // make a filter function 
 // This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
 //  after that we are filter function which filter on the basis of searchtxt from restaurents.data.name and then return the filter data 
-function filter(searchtxt, restaurants) {
-    const filterdata = restaurants.filter((restaurant)=>restaurant.data.name.includes(searchtxt));
+function filter(searchtxt, allrestarurent) {
+    const filterdata = allrestarurent.filter((restaurant)=>restaurant?.data?.name?.toLowerCase()?.includes(searchtxt.toLowerCase()));
     return filterdata;
 }
+// now we write code for body
 const Body = ()=>{
     _s();
-    const [restaurants, setrestaurants] = (0, _react.useState)((0, _config.restrurentlist));
-    const [searchtxt, setsearchtxt] = (0, _react.useState)();
+    //  here we kept two copy of restrurent list
+    const [allrestarurent, setallrestaurent] = (0, _react.useState)();
+    //  here we are creating state variable 
+    const [filterdrestaurants, setFilteredrestaurants] = (0, _react.useState)([]);
+    const [searchtxt, setsearchtxt] = (0, _react.useState)([]);
+    //  we are using use-effect for fetching api as we want fetch the api only once 
+    (0, _react.useEffect)(()=>{
+        getRestrurent();
+    }, []);
+    //  below function is for api call as we are using Swiggy public api for fetching data
+    async function getRestrurent() {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9315929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        //    opetional chaining
+        setallrestaurent(json?.data?.cards[2]?.data?.data?.cards);
+        setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    }
     //  heare we have create a handle search which chech if search text is empty then it shows no result fount
     const handleSearch = ()=>{
         if (searchtxt) {
             // If searchtxt is not empty, apply the filter function to get the filtered data
-            const data = filter(searchtxt, (0, _config.restrurentlist));
-            setrestaurants(data);
+            const data = filter(searchtxt, allrestarurent);
+            setFilteredrestaurants(data);
         } else // If searchtxt is empty, restore the original data
-        setrestaurants((0, _config.restrurentlist));
+        setFilteredrestaurants(allrestarurent);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -27476,7 +27492,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 28,
+                        lineNumber: 48,
                         columnNumber: 8
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27485,30 +27501,30 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 31,
+                        lineNumber: 51,
                         columnNumber: 8
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 26,
+                lineNumber: 46,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 id: "Restrurent",
-                children: restaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: filterdrestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                     children: "No Result Found"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 46,
-                    columnNumber: 41
-                }, undefined) : restaurants.map((restaurant)=>{
+                    lineNumber: 66,
+                    columnNumber: 48
+                }, undefined) : filterdrestaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _react.createElement)((0, _cardsDefault.default), {
                         ...restaurant.data,
                         key: restaurant.data.id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 47,
+                            lineNumber: 67,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -27516,13 +27532,13 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 44,
+                lineNumber: 64,
                 columnNumber: 9
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "VFZw3Z+2SEz1RCZVXaQyL4zBVeA=");
+_s(Body, "lYqp7o4STg8fKItAKv0KDvo0HAs=");
 _c = Body;
 exports.default = Body;
 var _c;
