@@ -28,7 +28,7 @@
 
 }
 
-#img{
+.cards>img{
     width: 100%;
     
     border: 2px solid black;
@@ -39,5 +39,5 @@
     display: flex;
 
     flex-wrap: wrap;
-    width: 100%;
+  
 }

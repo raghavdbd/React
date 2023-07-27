@@ -1,0 +1,29 @@
+Exploring the world
+
+Q1. what is microservices?
+Ans. microservices arechitecture allow us instead of build one big project we can build a some small small project as it help in reducing the complexity
+or we can say that
+Microservices are an architectural and organizational approach to software development where software is composed of small independent services that communicate over well-defined APIs
+
+
+
+Q2. what is Monolith architecture
+Ans.In monolith architecture we built a larger project in a single file.  Monolithic, in this context, means "composed all in one piece."
+
+Q3. what is the use of use Effect hook();
+Ans. first of use effect hook is creaded by passing calll back bunction and dependency array
+that call back function is depent on dependency array
+
+use effect function will cal whenever there condition in dependency array met
+if we did not pass any thing in use effect dependency array then it will call once
+we use it to call Api as we want to render data only once
+
+
+Q4.What is optional chaining?
+Ans. Optional Chaoining is '?' we use this when we are extracting data if data is not present then our code will break but if we use optional chaing the it will not throw any error
+
+Q5. What is Shimmer Ui?
+Ans.A shimmer UI is a version of the UI that doesn't contain actual content, but instead mimics the layout and shapes of the content that will eventually appea
+
+Q6 what is difference betwwen js expression and js statements
+

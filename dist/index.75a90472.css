@@ -27,7 +27,7 @@
   overflow: auto;
 }
 
-#img {
+.cards > img {
   border: 2px solid #000;
   flex-wrap: wrap;
   width: 100%;
@@ -35,7 +35,6 @@
 
 #Restrurent {
   flex-wrap: wrap;
-  width: 100%;
   display: flex;
 }
 

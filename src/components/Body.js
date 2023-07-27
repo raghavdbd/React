@@ -17,9 +17,9 @@ return filterdata;
 const Body = () =>{
 
     //  here we kept two copy of restrurent list
-    const [allrestarurent,setallrestaurent]=useState();
+    const [allrestarurent,setallrestaurent]=useState([]);
     //  here we are creating state variable 
-    const [filterdrestaurants,setFilteredrestaurants]= useState([])
+    const [filterdrestaurants,setFilteredrestaurants]= useState(restrurentlist)
     const [searchtxt,setsearchtxt]=useState([]);
 
     //  we are using use-effect for fetching api as we want fetch the api only once 
@@ -32,15 +32,17 @@ const Body = () =>{
     async function getRestrurent(){
         const data=await fetch(
         
-            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9315929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
+            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6691565&lng=77.45375779999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
        )
        const json=await data.json();
+       console.log(json)
     //    opetional chaining
-    setallrestaurent(json?.data?.cards[2]?.data?.data?.cards);
-   setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
+//     setallrestaurent(json?.data?.cards[2]?.data?.data?.cards);
+//    setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
 
     }
+    console.log(filterdrestaurants)
    
     //  heare we have create a handle search which chech if search text is empty then it shows no result fount
     const handleSearch = () => {
