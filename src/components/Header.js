@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 const Title=()=>{
     return (
     
@@ -14,7 +14,13 @@ const Header=()=>{
             <div id="headercomponents">
                 <ul>
                     <li>Home</li>
+                    <li>
+                    <Link to = '/about'>
                     <li>About</li>
+                    </Link>
+                    </li>
+                    
+                    
                     <li>Contact</li>
                     <li>Cart</li>
                 </ul>

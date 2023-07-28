@@ -2958,22 +2958,24 @@ var _aboutJs = require("./components/About.js");
 var _aboutJsDefault = parcelHelpers.interopDefault(_aboutJs);
 var _error = require("./components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
+var _contacts = require("./components/Contacts");
+var _contactsDefault = parcelHelpers.interopDefault(_contacts);
 const Applayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 9
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 12,
+                lineNumber: 14,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/app.js",
-                lineNumber: 13,
+                lineNumber: 15,
                 columnNumber: 9
             }, undefined)
         ]
@@ -2986,27 +2988,55 @@ const approuter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Applayout, {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 20,
+            lineNumber: 22,
             columnNumber: 12
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/app.js",
-            lineNumber: 21,
+            lineNumber: 23,
             columnNumber: 17
-        }, undefined)
-    },
-    {
-        path: "/about",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJsDefault.default), {}, void 0, false, {
-            fileName: "src/app.js",
-            lineNumber: 24,
-            columnNumber: 12
         }, undefined),
-        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
-            fileName: "src/app.js",
-            lineNumber: 25,
-            columnNumber: 17
-        }, undefined)
+        children: [
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJsDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 26,
+                    columnNumber: 14
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 27,
+                    columnNumber: 19
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactsDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 30,
+                    columnNumber: 14
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 31,
+                    columnNumber: 19
+                }, undefined)
+            },
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 34,
+                    columnNumber: 14
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/app.js",
+                    lineNumber: 35,
+                    columnNumber: 19
+                }, undefined)
+            }
+        ]
     }
 ]);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
@@ -3014,7 +3044,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: approuter
 }, void 0, false, {
     fileName: "src/app.js",
-    lineNumber: 28,
+    lineNumber: 39,
     columnNumber: 13
 }, undefined)); // root.render(<about />);
 var _c;
@@ -3025,7 +3055,7 @@ $RefreshReg$(_c, "Applayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","react-router-dom":"9xmpe","./components/About.js":"9R1Eu","./components/Error":"kvula"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","react-router-dom":"9xmpe","./components/About.js":"9R1Eu","./components/Error":"kvula","./components/Contacts":"3ay3w"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27388,6 +27418,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
 const Title = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
         src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvTiYvL2R6PNlChsx7LeLbHF23-Fn9MXctMg&usqp=CAU",
@@ -27395,7 +27426,7 @@ const Title = ()=>{
         id: "logo"
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 2,
+        lineNumber: 3,
         columnNumber: 10
     }, undefined);
 };
@@ -27406,7 +27437,7 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 6,
+                lineNumber: 7,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27417,45 +27448,58 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 9,
-                            columnNumber: 21
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
                             lineNumber: 10,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact"
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/about",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                    children: "About"
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 13,
+                                    columnNumber: 21
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 12,
+                                columnNumber: 21
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 11,
                             columnNumber: 21
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: "Contact"
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 18,
+                            columnNumber: 21
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 12,
+                            lineNumber: 19,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 8,
+                    lineNumber: 9,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 7,
+                lineNumber: 8,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 5,
+        lineNumber: 6,
         columnNumber: 10
     }, undefined);
 };
@@ -27470,864 +27514,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8yaV8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0606.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _config = require("../config");
-var _cards = require("./Cards");
-var _cardsDefault = parcelHelpers.interopDefault(_cards);
-var _s = $RefreshSig$();
-// make a filter function 
-// This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
-//  after that we are filter function which filter on the basis of searchtxt from restaurents.data.name and then return the filter data 
-function filter(searchtxt, allrestarurent) {
-    const filterdata = allrestarurent.filter((restaurant)=>restaurant?.data?.name?.toLowerCase()?.includes(searchtxt.toLowerCase()));
-    return filterdata;
-}
-// now we write code for body
-const Body = ()=>{
-    _s();
-    //  here we kept two copy of restrurent list
-    const [allrestarurent, setallrestaurent] = (0, _react.useState)([]);
-    //  here we are creating state variable 
-    const [filterdrestaurants, setFilteredrestaurants] = (0, _react.useState)((0, _config.restrurentlist));
-    const [searchtxt, setsearchtxt] = (0, _react.useState)([]);
-    //  we are using use-effect for fetching api as we want fetch the api only once 
-    (0, _react.useEffect)(()=>{
-        getRestrurent();
-    }, []);
-    //  below function is for api call as we are using Swiggy public api for fetching data
-    async function getRestrurent() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6691565&lng=77.45375779999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-        const json = await data.json();
-        console.log(json);
-    //    opetional chaining
-    //     setallrestaurent(json?.data?.cards[2]?.data?.data?.cards);
-    //    setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    }
-    console.log(filterdrestaurants);
-    //  heare we have create a handle search which chech if search text is empty then it shows no result fount
-    const handleSearch = ()=>{
-        if (searchtxt) {
-            // If searchtxt is not empty, apply the filter function to get the filtered data
-            const data = filter(searchtxt, allrestarurent);
-            setFilteredrestaurants(data);
-        } else // If searchtxt is empty, restore the original data
-        setFilteredrestaurants(allrestarurent);
-    };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        placeholder: "Search",
-                        value: searchtxt,
-                        onChange: (e)=>{
-                            setsearchtxt(e.target.value);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 51,
-                        columnNumber: 8
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "Search-btn",
-                        onClick: handleSearch,
-                        children: "Search"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 54,
-                        columnNumber: 8
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 49,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                id: "Restrurent",
-                children: filterdrestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                    children: "No Result Found"
-                }, void 0, false, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 69,
-                    columnNumber: 48
-                }, undefined) : filterdrestaurants.map((restaurant)=>{
-                    return /*#__PURE__*/ (0, _react.createElement)((0, _cardsDefault.default), {
-                        ...restaurant.data,
-                        key: restaurant.data.id,
-                        __source: {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 70,
-                            columnNumber: 16
-                        },
-                        __self: undefined
-                    });
-                })
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 67,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(Body, "7TMMkY7kRIQ2wmLCVExPk5ijsBU=");
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$0606.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../config":"jtCLN","./Cards":"9rJEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jtCLN":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
-parcelHelpers.export(exports, "restrurentlist", ()=>restrurentlist);
-const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-const restrurentlist = [
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "706465",
-            "name": "Louis Burger",
-            "uuid": "fc861dc8-ac40-4435-acb6-8ea543290d10",
-            "city": "10459",
-            "area": "Indirapuram",
-            "totalRatingsString": "20+ ratings",
-            "cloudinaryImageId": "18bb368493aac7f51c173b3c224aaa69",
-            "cuisines": [
-                "Burgers",
-                "American",
-                "Fast Food"
-            ],
-            "tags": [],
-            "costForTwo": 60000,
-            "costForTwoString": "₹600 FOR TWO",
-            "deliveryTime": 19,
-            "minDeliveryTime": 19,
-            "maxDeliveryTime": 19,
-            "slaString": "19 MINS",
-            "lastMileTravel": 0.699999988079071,
-            "slugs": {
-                "restaurant": "louis-burger-one-square-mall-indirapuram",
-                "city": "noida-1"
-            },
-            "cityState": "10459",
-            "address": "Kitchen No. 3, First Floor, 68/1, One Square Mall, Shakti Khand-3, Indirapuram, Ghaziabad , Ghaziabad Nagar Nigam Zone-6, Ghaziabad, Uttar Pradesh-201014",
-            "locality": "One Square Mall",
-            "parentId": 22485,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "ribbon": [
-                {
-                    "type": "PROMOTED"
-                }
-            ],
-            "chain": [],
-            "feeDetails": {
-                "fees": [
-                    {
-                        "name": "distance",
-                        "fee": 3500,
-                        "message": ""
-                    },
-                    {
-                        "name": "time",
-                        "fee": 0,
-                        "message": ""
-                    },
-                    {
-                        "name": "special",
-                        "fee": 0,
-                        "message": ""
-                    }
-                ],
-                "totalFees": 3500,
-                "message": "",
-                "title": "Delivery Charge",
-                "amount": "3500",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "cid=7457171~p=1~eid=00000189-6849-2d48-192a-a14900240147~srvts=1689671773512",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "0.6 kms",
-            "hasSurge": false,
-            "aggregatedDiscountInfoV3": {
-                "header": "30% OFF",
-                "subHeader": "UPTO ₹75",
-                "discountTag": "",
-                "headerTypeV2": 0
-            },
-            "sla": {
-                "restaurantId": "706465",
-                "deliveryTime": 19,
-                "minDeliveryTime": 19,
-                "maxDeliveryTime": 19,
-                "lastMileTravel": 0.699999988079071,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": true,
-            "avgRating": "4.8",
-            "totalRatings": 20,
-            "new": true
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "458868",
-            "name": "Dr Pizza",
-            "uuid": "28a2eeba-794d-44be-aeaa-f3c09f700b7d",
-            "city": "10459",
-            "area": "Indirapuram",
-            "totalRatingsString": "Too Few Ratings",
-            "cloudinaryImageId": "fiy3jxugg9gte7icqpxe",
-            "cuisines": [
-                "Indian"
-            ],
-            "tags": [],
-            "costForTwo": 30000,
-            "costForTwoString": "₹300 FOR TWO",
-            "deliveryTime": 28,
-            "minDeliveryTime": 28,
-            "maxDeliveryTime": 28,
-            "slaString": "28 MINS",
-            "lastMileTravel": 1.899999976158142,
-            "slugs": {
-                "restaurant": "dr-pizza-indirapuram-indirapuram",
-                "city": "noida-1"
-            },
-            "cityState": "10459",
-            "address": "874 G, NYAY KHAND INDIRAPURAM, GHAZIABAD , Makanpur, Indirapuram, Ghaziabad Nagar Nigam Zone-6, Ghaziabad, Uttar Pradesh - 201014",
-            "locality": "Nyay Khand",
-            "parentId": 388004,
-            "unserviceable": false,
-            "veg": true,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "chain": [],
-            "feeDetails": {
-                "fees": [
-                    {
-                        "name": "distance",
-                        "fee": 3500,
-                        "message": ""
-                    },
-                    {
-                        "name": "time",
-                        "fee": 0,
-                        "message": ""
-                    },
-                    {
-                        "name": "special",
-                        "fee": 0,
-                        "message": ""
-                    }
-                ],
-                "totalFees": 3500,
-                "message": "",
-                "title": "Delivery Charge",
-                "amount": "3500",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "1.8 kms",
-            "hasSurge": false,
-            "aggregatedDiscountInfoV3": {
-                "header": "20% OFF",
-                "subHeader": "UPTO ₹50",
-                "discountTag": "",
-                "headerTypeV2": 0
-            },
-            "sla": {
-                "restaurantId": "458868",
-                "deliveryTime": 28,
-                "minDeliveryTime": 28,
-                "maxDeliveryTime": 28,
-                "lastMileTravel": 1.899999976158142,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "--",
-            "totalRatings": 0,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "596987",
-            "name": "Food O' Clock",
-            "uuid": "84c242bd-1da7-4a42-846f-f03ff350e66e",
-            "city": "10459",
-            "area": "Indirapuram",
-            "totalRatingsString": "Too Few Ratings",
-            "cloudinaryImageId": "3d319778ae6c36079bd30999adc9eaf3",
-            "cuisines": [
-                "North Indian",
-                "Snacks",
-                "Chinese",
-                "Fast Food"
-            ],
-            "tags": [],
-            "costForTwo": 25000,
-            "costForTwoString": "₹250 FOR TWO",
-            "deliveryTime": 28,
-            "minDeliveryTime": 28,
-            "maxDeliveryTime": 28,
-            "slaString": "28 MINS",
-            "lastMileTravel": 1.600000023841858,
-            "slugs": {
-                "restaurant": "food’o-clock-indirapuram-indirapuram",
-                "city": "noida-1"
-            },
-            "cityState": "10459",
-            "address": "Plot no 197 flat no B2 second floor Gyan khand 1 indirapuram ghaziabad, Ghaziabad (M Corp.), Ghaziabad Tahsil, Ghaziabad, Uttar Pradesh - 201014",
-            "locality": "3rd abhay khand",
-            "parentId": 81725,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "chain": [],
-            "feeDetails": {
-                "fees": [
-                    {
-                        "name": "distance",
-                        "fee": 3500,
-                        "message": ""
-                    },
-                    {
-                        "name": "time",
-                        "fee": 0,
-                        "message": ""
-                    },
-                    {
-                        "name": "special",
-                        "fee": 0,
-                        "message": ""
-                    }
-                ],
-                "totalFees": 3500,
-                "message": "",
-                "title": "Delivery Charge",
-                "amount": "3500",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "1.6 kms",
-            "hasSurge": false,
-            "aggregatedDiscountInfoV3": {
-                "header": "20% OFF",
-                "subHeader": "UPTO ₹50",
-                "discountTag": "",
-                "headerTypeV2": 0
-            },
-            "sla": {
-                "restaurantId": "596987",
-                "deliveryTime": 28,
-                "minDeliveryTime": 28,
-                "maxDeliveryTime": 28,
-                "lastMileTravel": 1.600000023841858,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "--",
-            "totalRatings": 0,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "650301",
-            "name": "Punjabi Angithi",
-            "uuid": "64209202-17d0-4cb2-bbff-4873aefeb169",
-            "city": "10459",
-            "area": "Indirapuram",
-            "totalRatingsString": "1000+ ratings",
-            "cloudinaryImageId": "462fee9cf0f98f128cc8aa9148c24bbf",
-            "cuisines": [
-                "North Indian",
-                "Chinese"
-            ],
-            "tags": [],
-            "costForTwo": 40000,
-            "costForTwoString": "₹400 FOR TWO",
-            "deliveryTime": 17,
-            "minDeliveryTime": 17,
-            "maxDeliveryTime": 17,
-            "slaString": "17 MINS",
-            "lastMileTravel": 1.7999999523162842,
-            "slugs": {
-                "restaurant": "punjabi-angithi-indirapuram-indirapuram",
-                "city": "noida-1"
-            },
-            "cityState": "10459",
-            "address": "SHOP NO -01, NEAR ADITYA MALL, MAKANPUR INDIRAPURAM GHAZIABAD, Ghaziabad Tahsil,Ghaziabad, Uttar Pradesh-201014",
-            "locality": "Aditya Mall",
-            "parentId": 4464,
-            "unserviceable": false,
-            "veg": true,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "ribbon": [
-                {
-                    "type": "PROMOTED"
-                }
-            ],
-            "chain": [],
-            "feeDetails": {
-                "fees": [
-                    {
-                        "name": "distance",
-                        "fee": 3500,
-                        "message": ""
-                    },
-                    {
-                        "name": "time",
-                        "fee": 0,
-                        "message": ""
-                    },
-                    {
-                        "name": "special",
-                        "fee": 0,
-                        "message": ""
-                    }
-                ],
-                "totalFees": 3500,
-                "message": "",
-                "title": "Delivery Charge",
-                "amount": "3500",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "cid=7429868~p=4~eid=00000189-6849-2d48-192a-a14a0024041c~srvts=1689671773512",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "1.7 kms",
-            "hasSurge": false,
-            "aggregatedDiscountInfoV3": {
-                "header": "₹125 OFF",
-                "subHeader": "ABOVE ₹249",
-                "discountTag": "",
-                "headerTypeV2": 1
-            },
-            "sla": {
-                "restaurantId": "650301",
-                "deliveryTime": 17,
-                "minDeliveryTime": 17,
-                "maxDeliveryTime": 17,
-                "lastMileTravel": 1.7999999523162842,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": true,
-            "avgRating": "4.1",
-            "totalRatings": 1000,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "343112",
-            "name": "Veer Ji Malai Chaap Wale",
-            "uuid": "6bbee06f-da1a-4cb9-85a8-5ba78500b2f0",
-            "city": "10459",
-            "area": "Ghaziabad",
-            "totalRatingsString": "500+ ratings",
-            "cloudinaryImageId": "avvyjqmjycb6pdn37lk1",
-            "cuisines": [
-                "Indian"
-            ],
-            "tags": [],
-            "costForTwo": 35000,
-            "costForTwoString": "₹350 FOR TWO",
-            "deliveryTime": 18,
-            "minDeliveryTime": 18,
-            "maxDeliveryTime": 18,
-            "slaString": "18 MINS",
-            "lastMileTravel": 1.600000023841858,
-            "slugs": {
-                "restaurant": "veer-ji-malai-chaap-wale-indirapuram-indirapuram-2",
-                "city": "noida-1"
-            },
-            "cityState": "10459",
-            "address": "G-10 & G-17,GROUND FLOOR PARSVNATH MAJESTIC PLON0-18A,VAIBHAV KAHND INDIRAPURAM GHAZIABAD, Vasundhara Colony, Ghaziabad Nagar Nigam Zone-6, Ghaziabad, Uttar Pradesh-201014",
-            "locality": "Indirapuram",
-            "parentId": 12056,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "chain": [],
-            "feeDetails": {
-                "fees": [
-                    {
-                        "name": "distance",
-                        "fee": 3500,
-                        "message": ""
-                    },
-                    {
-                        "name": "time",
-                        "fee": 0,
-                        "message": ""
-                    },
-                    {
-                        "name": "special",
-                        "fee": 0,
-                        "message": ""
-                    }
-                ],
-                "totalFees": 3500,
-                "message": "",
-                "title": "Delivery Charge",
-                "amount": "3500",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "1.6 kms",
-            "hasSurge": false,
-            "aggregatedDiscountInfoV3": {
-                "header": "20% OFF",
-                "subHeader": "UPTO ₹50",
-                "discountTag": "",
-                "headerTypeV2": 0
-            },
-            "sla": {
-                "restaurantId": "343112",
-                "deliveryTime": 18,
-                "minDeliveryTime": 18,
-                "maxDeliveryTime": 18,
-                "lastMileTravel": 1.600000023841858,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "3.8",
-            "totalRatings": 500,
-            "new": false
-        },
-        "subtype": "basic"
-    },
-    {
-        "type": "restaurant",
-        "data": {
-            "type": "F",
-            "id": "470987",
-            "name": "Sardar G Malai Chaap Junction",
-            "uuid": "85b2e198-2723-44c0-8817-c8ee49b2db0c",
-            "city": "24",
-            "area": "Kaushambi",
-            "totalRatingsString": "20+ ratings",
-            "cloudinaryImageId": "bhqi7pv436eiwwj36axh",
-            "cuisines": [
-                "North Indian",
-                "Fast Food"
-            ],
-            "tags": [],
-            "costForTwo": 20000,
-            "costForTwoString": "₹200 FOR TWO",
-            "deliveryTime": 32,
-            "minDeliveryTime": 32,
-            "maxDeliveryTime": 32,
-            "slaString": "32 MINS",
-            "lastMileTravel": 2.4000000953674316,
-            "slugs": {
-                "restaurant": "sardar-ji-malai-chaap-junction-kaushambi-kaushambi",
-                "city": "noida"
-            },
-            "cityState": "24",
-            "address": "Near Ramprastha Greens, vaishali, Ghaziabad, Uttarpardesh.201010",
-            "locality": "Near Ramprastha Greens",
-            "parentId": 14511,
-            "unserviceable": false,
-            "veg": false,
-            "select": false,
-            "favorite": false,
-            "tradeCampaignHeaders": [],
-            "chain": [],
-            "feeDetails": {
-                "fees": [
-                    {
-                        "name": "distance",
-                        "fee": 3500,
-                        "message": ""
-                    },
-                    {
-                        "name": "time",
-                        "fee": 0,
-                        "message": ""
-                    },
-                    {
-                        "name": "special",
-                        "fee": 0,
-                        "message": ""
-                    }
-                ],
-                "totalFees": 3500,
-                "message": "",
-                "title": "Delivery Charge",
-                "amount": "3500",
-                "icon": ""
-            },
-            "availability": {
-                "opened": true,
-                "nextOpenMessage": "",
-                "nextCloseMessage": ""
-            },
-            "longDistanceEnabled": 0,
-            "rainMode": "NONE",
-            "thirdPartyAddress": false,
-            "thirdPartyVendor": "",
-            "adTrackingID": "",
-            "badges": {
-                "imageBased": [],
-                "textBased": [],
-                "textExtendedBadges": []
-            },
-            "lastMileTravelString": "2.4 kms",
-            "hasSurge": false,
-            "sla": {
-                "restaurantId": "470987",
-                "deliveryTime": 32,
-                "minDeliveryTime": 32,
-                "maxDeliveryTime": 32,
-                "lastMileTravel": 2.4000000953674316,
-                "lastMileDistance": 0,
-                "serviceability": "SERVICEABLE",
-                "rainMode": "NONE",
-                "longDistance": "NOT_LONG_DISTANCE",
-                "preferentialService": false,
-                "iconType": "EMPTY"
-            },
-            "promoted": false,
-            "avgRating": "4.1",
-            "totalRatings": 20,
-            "new": false
-        },
-        "subtype": "basic"
-    }
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9rJEe":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$1709 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$1709.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _config = require("../config");
-const Card = ({ name, cuisines, cloudinaryImageId, avgRating })=>{
-    // destructuring restrurent list
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "cards",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _config.IMG_CDN_URL) + cloudinaryImageId,
-                alt: "restrurnt image",
-                id: "img"
-            }, void 0, false, {
-                fileName: "src/components/Cards.js",
-                lineNumber: 11,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/Cards.js",
-                lineNumber: 12,
-                columnNumber: 11
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: cuisines.join(",")
-            }, void 0, false, {
-                fileName: "src/components/Cards.js",
-                lineNumber: 13,
-                columnNumber: 11
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: [
-                    avgRating,
-                    " Stars"
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Cards.js",
-                lineNumber: 14,
-                columnNumber: 11
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Cards.js",
-        lineNumber: 10,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Card;
-exports.default = Card;
-var _c;
-$RefreshReg$(_c, "Card");
-
-  $parcel$ReactRefreshHelpers$1709.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../config":"jtCLN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bc7c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Footer"
-    }, void 0, false, {
-        fileName: "src/components/Footer.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Footer;
-exports.default = Footer;
-var _c;
-$RefreshReg$(_c, "Footer");
-
-  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.14.2
  *
@@ -34159,7 +33346,864 @@ function getDoneFetcher(data) {
     return fetcher;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9R1Eu":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0606.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _config = require("../config");
+var _cards = require("./Cards");
+var _cardsDefault = parcelHelpers.interopDefault(_cards);
+var _s = $RefreshSig$();
+// make a filter function 
+// This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
+//  after that we are filter function which filter on the basis of searchtxt from restaurents.data.name and then return the filter data 
+function filter(searchtxt, allrestarurent) {
+    const filterdata = allrestarurent.filter((restaurant)=>restaurant?.data?.name?.toLowerCase()?.includes(searchtxt.toLowerCase()));
+    return filterdata;
+}
+// now we write code for body
+const Body = ()=>{
+    _s();
+    //  here we kept two copy of restrurent list
+    const [allrestarurent, setallrestaurent] = (0, _react.useState)([]);
+    //  here we are creating state variable 
+    const [filterdrestaurants, setFilteredrestaurants] = (0, _react.useState)((0, _config.restrurentlist));
+    const [searchtxt, setsearchtxt] = (0, _react.useState)([]);
+    //  we are using use-effect for fetching api as we want fetch the api only once 
+    (0, _react.useEffect)(()=>{
+        getRestrurent();
+    }, []);
+    //  below function is for api call as we are using Swiggy public api for fetching data
+    async function getRestrurent() {
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6691565&lng=77.45375779999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log(json);
+    //    opetional chaining
+    //     setallrestaurent(json?.data?.cards[2]?.data?.data?.cards);
+    //    setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    }
+    console.log(filterdrestaurants);
+    //  heare we have create a handle search which chech if search text is empty then it shows no result fount
+    const handleSearch = ()=>{
+        if (searchtxt) {
+            // If searchtxt is not empty, apply the filter function to get the filtered data
+            const data = filter(searchtxt, allrestarurent);
+            setFilteredrestaurants(data);
+        } else // If searchtxt is empty, restore the original data
+        setFilteredrestaurants(allrestarurent);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        placeholder: "Search",
+                        value: searchtxt,
+                        onChange: (e)=>{
+                            setsearchtxt(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 51,
+                        columnNumber: 8
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "Search-btn",
+                        onClick: handleSearch,
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 54,
+                        columnNumber: 8
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 49,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                id: "Restrurent",
+                children: filterdrestaurants.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                    children: "No Result Found"
+                }, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 69,
+                    columnNumber: 48
+                }, undefined) : filterdrestaurants.map((restaurant)=>{
+                    return /*#__PURE__*/ (0, _react.createElement)((0, _cardsDefault.default), {
+                        ...restaurant.data,
+                        key: restaurant.data.id,
+                        __source: {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 70,
+                            columnNumber: 16
+                        },
+                        __self: undefined
+                    });
+                })
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 67,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "7TMMkY7kRIQ2wmLCVExPk5ijsBU=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../config":"jtCLN","./Cards":"9rJEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jtCLN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
+parcelHelpers.export(exports, "restrurentlist", ()=>restrurentlist);
+const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const restrurentlist = [
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "706465",
+            "name": "Louis Burger",
+            "uuid": "fc861dc8-ac40-4435-acb6-8ea543290d10",
+            "city": "10459",
+            "area": "Indirapuram",
+            "totalRatingsString": "20+ ratings",
+            "cloudinaryImageId": "18bb368493aac7f51c173b3c224aaa69",
+            "cuisines": [
+                "Burgers",
+                "American",
+                "Fast Food"
+            ],
+            "tags": [],
+            "costForTwo": 60000,
+            "costForTwoString": "₹600 FOR TWO",
+            "deliveryTime": 19,
+            "minDeliveryTime": 19,
+            "maxDeliveryTime": 19,
+            "slaString": "19 MINS",
+            "lastMileTravel": 0.699999988079071,
+            "slugs": {
+                "restaurant": "louis-burger-one-square-mall-indirapuram",
+                "city": "noida-1"
+            },
+            "cityState": "10459",
+            "address": "Kitchen No. 3, First Floor, 68/1, One Square Mall, Shakti Khand-3, Indirapuram, Ghaziabad , Ghaziabad Nagar Nigam Zone-6, Ghaziabad, Uttar Pradesh-201014",
+            "locality": "One Square Mall",
+            "parentId": 22485,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "ribbon": [
+                {
+                    "type": "PROMOTED"
+                }
+            ],
+            "chain": [],
+            "feeDetails": {
+                "fees": [
+                    {
+                        "name": "distance",
+                        "fee": 3500,
+                        "message": ""
+                    },
+                    {
+                        "name": "time",
+                        "fee": 0,
+                        "message": ""
+                    },
+                    {
+                        "name": "special",
+                        "fee": 0,
+                        "message": ""
+                    }
+                ],
+                "totalFees": 3500,
+                "message": "",
+                "title": "Delivery Charge",
+                "amount": "3500",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "cid=7457171~p=1~eid=00000189-6849-2d48-192a-a14900240147~srvts=1689671773512",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "0.6 kms",
+            "hasSurge": false,
+            "aggregatedDiscountInfoV3": {
+                "header": "30% OFF",
+                "subHeader": "UPTO ₹75",
+                "discountTag": "",
+                "headerTypeV2": 0
+            },
+            "sla": {
+                "restaurantId": "706465",
+                "deliveryTime": 19,
+                "minDeliveryTime": 19,
+                "maxDeliveryTime": 19,
+                "lastMileTravel": 0.699999988079071,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": true,
+            "avgRating": "4.8",
+            "totalRatings": 20,
+            "new": true
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "458868",
+            "name": "Dr Pizza",
+            "uuid": "28a2eeba-794d-44be-aeaa-f3c09f700b7d",
+            "city": "10459",
+            "area": "Indirapuram",
+            "totalRatingsString": "Too Few Ratings",
+            "cloudinaryImageId": "fiy3jxugg9gte7icqpxe",
+            "cuisines": [
+                "Indian"
+            ],
+            "tags": [],
+            "costForTwo": 30000,
+            "costForTwoString": "₹300 FOR TWO",
+            "deliveryTime": 28,
+            "minDeliveryTime": 28,
+            "maxDeliveryTime": 28,
+            "slaString": "28 MINS",
+            "lastMileTravel": 1.899999976158142,
+            "slugs": {
+                "restaurant": "dr-pizza-indirapuram-indirapuram",
+                "city": "noida-1"
+            },
+            "cityState": "10459",
+            "address": "874 G, NYAY KHAND INDIRAPURAM, GHAZIABAD , Makanpur, Indirapuram, Ghaziabad Nagar Nigam Zone-6, Ghaziabad, Uttar Pradesh - 201014",
+            "locality": "Nyay Khand",
+            "parentId": 388004,
+            "unserviceable": false,
+            "veg": true,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "chain": [],
+            "feeDetails": {
+                "fees": [
+                    {
+                        "name": "distance",
+                        "fee": 3500,
+                        "message": ""
+                    },
+                    {
+                        "name": "time",
+                        "fee": 0,
+                        "message": ""
+                    },
+                    {
+                        "name": "special",
+                        "fee": 0,
+                        "message": ""
+                    }
+                ],
+                "totalFees": 3500,
+                "message": "",
+                "title": "Delivery Charge",
+                "amount": "3500",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "1.8 kms",
+            "hasSurge": false,
+            "aggregatedDiscountInfoV3": {
+                "header": "20% OFF",
+                "subHeader": "UPTO ₹50",
+                "discountTag": "",
+                "headerTypeV2": 0
+            },
+            "sla": {
+                "restaurantId": "458868",
+                "deliveryTime": 28,
+                "minDeliveryTime": 28,
+                "maxDeliveryTime": 28,
+                "lastMileTravel": 1.899999976158142,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "--",
+            "totalRatings": 0,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "596987",
+            "name": "Food O' Clock",
+            "uuid": "84c242bd-1da7-4a42-846f-f03ff350e66e",
+            "city": "10459",
+            "area": "Indirapuram",
+            "totalRatingsString": "Too Few Ratings",
+            "cloudinaryImageId": "3d319778ae6c36079bd30999adc9eaf3",
+            "cuisines": [
+                "North Indian",
+                "Snacks",
+                "Chinese",
+                "Fast Food"
+            ],
+            "tags": [],
+            "costForTwo": 25000,
+            "costForTwoString": "₹250 FOR TWO",
+            "deliveryTime": 28,
+            "minDeliveryTime": 28,
+            "maxDeliveryTime": 28,
+            "slaString": "28 MINS",
+            "lastMileTravel": 1.600000023841858,
+            "slugs": {
+                "restaurant": "food’o-clock-indirapuram-indirapuram",
+                "city": "noida-1"
+            },
+            "cityState": "10459",
+            "address": "Plot no 197 flat no B2 second floor Gyan khand 1 indirapuram ghaziabad, Ghaziabad (M Corp.), Ghaziabad Tahsil, Ghaziabad, Uttar Pradesh - 201014",
+            "locality": "3rd abhay khand",
+            "parentId": 81725,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "chain": [],
+            "feeDetails": {
+                "fees": [
+                    {
+                        "name": "distance",
+                        "fee": 3500,
+                        "message": ""
+                    },
+                    {
+                        "name": "time",
+                        "fee": 0,
+                        "message": ""
+                    },
+                    {
+                        "name": "special",
+                        "fee": 0,
+                        "message": ""
+                    }
+                ],
+                "totalFees": 3500,
+                "message": "",
+                "title": "Delivery Charge",
+                "amount": "3500",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "1.6 kms",
+            "hasSurge": false,
+            "aggregatedDiscountInfoV3": {
+                "header": "20% OFF",
+                "subHeader": "UPTO ₹50",
+                "discountTag": "",
+                "headerTypeV2": 0
+            },
+            "sla": {
+                "restaurantId": "596987",
+                "deliveryTime": 28,
+                "minDeliveryTime": 28,
+                "maxDeliveryTime": 28,
+                "lastMileTravel": 1.600000023841858,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "--",
+            "totalRatings": 0,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "650301",
+            "name": "Punjabi Angithi",
+            "uuid": "64209202-17d0-4cb2-bbff-4873aefeb169",
+            "city": "10459",
+            "area": "Indirapuram",
+            "totalRatingsString": "1000+ ratings",
+            "cloudinaryImageId": "462fee9cf0f98f128cc8aa9148c24bbf",
+            "cuisines": [
+                "North Indian",
+                "Chinese"
+            ],
+            "tags": [],
+            "costForTwo": 40000,
+            "costForTwoString": "₹400 FOR TWO",
+            "deliveryTime": 17,
+            "minDeliveryTime": 17,
+            "maxDeliveryTime": 17,
+            "slaString": "17 MINS",
+            "lastMileTravel": 1.7999999523162842,
+            "slugs": {
+                "restaurant": "punjabi-angithi-indirapuram-indirapuram",
+                "city": "noida-1"
+            },
+            "cityState": "10459",
+            "address": "SHOP NO -01, NEAR ADITYA MALL, MAKANPUR INDIRAPURAM GHAZIABAD, Ghaziabad Tahsil,Ghaziabad, Uttar Pradesh-201014",
+            "locality": "Aditya Mall",
+            "parentId": 4464,
+            "unserviceable": false,
+            "veg": true,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "ribbon": [
+                {
+                    "type": "PROMOTED"
+                }
+            ],
+            "chain": [],
+            "feeDetails": {
+                "fees": [
+                    {
+                        "name": "distance",
+                        "fee": 3500,
+                        "message": ""
+                    },
+                    {
+                        "name": "time",
+                        "fee": 0,
+                        "message": ""
+                    },
+                    {
+                        "name": "special",
+                        "fee": 0,
+                        "message": ""
+                    }
+                ],
+                "totalFees": 3500,
+                "message": "",
+                "title": "Delivery Charge",
+                "amount": "3500",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "cid=7429868~p=4~eid=00000189-6849-2d48-192a-a14a0024041c~srvts=1689671773512",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "1.7 kms",
+            "hasSurge": false,
+            "aggregatedDiscountInfoV3": {
+                "header": "₹125 OFF",
+                "subHeader": "ABOVE ₹249",
+                "discountTag": "",
+                "headerTypeV2": 1
+            },
+            "sla": {
+                "restaurantId": "650301",
+                "deliveryTime": 17,
+                "minDeliveryTime": 17,
+                "maxDeliveryTime": 17,
+                "lastMileTravel": 1.7999999523162842,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": true,
+            "avgRating": "4.1",
+            "totalRatings": 1000,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "343112",
+            "name": "Veer Ji Malai Chaap Wale",
+            "uuid": "6bbee06f-da1a-4cb9-85a8-5ba78500b2f0",
+            "city": "10459",
+            "area": "Ghaziabad",
+            "totalRatingsString": "500+ ratings",
+            "cloudinaryImageId": "avvyjqmjycb6pdn37lk1",
+            "cuisines": [
+                "Indian"
+            ],
+            "tags": [],
+            "costForTwo": 35000,
+            "costForTwoString": "₹350 FOR TWO",
+            "deliveryTime": 18,
+            "minDeliveryTime": 18,
+            "maxDeliveryTime": 18,
+            "slaString": "18 MINS",
+            "lastMileTravel": 1.600000023841858,
+            "slugs": {
+                "restaurant": "veer-ji-malai-chaap-wale-indirapuram-indirapuram-2",
+                "city": "noida-1"
+            },
+            "cityState": "10459",
+            "address": "G-10 & G-17,GROUND FLOOR PARSVNATH MAJESTIC PLON0-18A,VAIBHAV KAHND INDIRAPURAM GHAZIABAD, Vasundhara Colony, Ghaziabad Nagar Nigam Zone-6, Ghaziabad, Uttar Pradesh-201014",
+            "locality": "Indirapuram",
+            "parentId": 12056,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "chain": [],
+            "feeDetails": {
+                "fees": [
+                    {
+                        "name": "distance",
+                        "fee": 3500,
+                        "message": ""
+                    },
+                    {
+                        "name": "time",
+                        "fee": 0,
+                        "message": ""
+                    },
+                    {
+                        "name": "special",
+                        "fee": 0,
+                        "message": ""
+                    }
+                ],
+                "totalFees": 3500,
+                "message": "",
+                "title": "Delivery Charge",
+                "amount": "3500",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "1.6 kms",
+            "hasSurge": false,
+            "aggregatedDiscountInfoV3": {
+                "header": "20% OFF",
+                "subHeader": "UPTO ₹50",
+                "discountTag": "",
+                "headerTypeV2": 0
+            },
+            "sla": {
+                "restaurantId": "343112",
+                "deliveryTime": 18,
+                "minDeliveryTime": 18,
+                "maxDeliveryTime": 18,
+                "lastMileTravel": 1.600000023841858,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "3.8",
+            "totalRatings": 500,
+            "new": false
+        },
+        "subtype": "basic"
+    },
+    {
+        "type": "restaurant",
+        "data": {
+            "type": "F",
+            "id": "470987",
+            "name": "Sardar G Malai Chaap Junction",
+            "uuid": "85b2e198-2723-44c0-8817-c8ee49b2db0c",
+            "city": "24",
+            "area": "Kaushambi",
+            "totalRatingsString": "20+ ratings",
+            "cloudinaryImageId": "bhqi7pv436eiwwj36axh",
+            "cuisines": [
+                "North Indian",
+                "Fast Food"
+            ],
+            "tags": [],
+            "costForTwo": 20000,
+            "costForTwoString": "₹200 FOR TWO",
+            "deliveryTime": 32,
+            "minDeliveryTime": 32,
+            "maxDeliveryTime": 32,
+            "slaString": "32 MINS",
+            "lastMileTravel": 2.4000000953674316,
+            "slugs": {
+                "restaurant": "sardar-ji-malai-chaap-junction-kaushambi-kaushambi",
+                "city": "noida"
+            },
+            "cityState": "24",
+            "address": "Near Ramprastha Greens, vaishali, Ghaziabad, Uttarpardesh.201010",
+            "locality": "Near Ramprastha Greens",
+            "parentId": 14511,
+            "unserviceable": false,
+            "veg": false,
+            "select": false,
+            "favorite": false,
+            "tradeCampaignHeaders": [],
+            "chain": [],
+            "feeDetails": {
+                "fees": [
+                    {
+                        "name": "distance",
+                        "fee": 3500,
+                        "message": ""
+                    },
+                    {
+                        "name": "time",
+                        "fee": 0,
+                        "message": ""
+                    },
+                    {
+                        "name": "special",
+                        "fee": 0,
+                        "message": ""
+                    }
+                ],
+                "totalFees": 3500,
+                "message": "",
+                "title": "Delivery Charge",
+                "amount": "3500",
+                "icon": ""
+            },
+            "availability": {
+                "opened": true,
+                "nextOpenMessage": "",
+                "nextCloseMessage": ""
+            },
+            "longDistanceEnabled": 0,
+            "rainMode": "NONE",
+            "thirdPartyAddress": false,
+            "thirdPartyVendor": "",
+            "adTrackingID": "",
+            "badges": {
+                "imageBased": [],
+                "textBased": [],
+                "textExtendedBadges": []
+            },
+            "lastMileTravelString": "2.4 kms",
+            "hasSurge": false,
+            "sla": {
+                "restaurantId": "470987",
+                "deliveryTime": 32,
+                "minDeliveryTime": 32,
+                "maxDeliveryTime": 32,
+                "lastMileTravel": 2.4000000953674316,
+                "lastMileDistance": 0,
+                "serviceability": "SERVICEABLE",
+                "rainMode": "NONE",
+                "longDistance": "NOT_LONG_DISTANCE",
+                "preferentialService": false,
+                "iconType": "EMPTY"
+            },
+            "promoted": false,
+            "avgRating": "4.1",
+            "totalRatings": 20,
+            "new": false
+        },
+        "subtype": "basic"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9rJEe":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$1709 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$1709.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _config = require("../config");
+const Card = ({ name, cuisines, cloudinaryImageId, avgRating })=>{
+    // destructuring restrurent list
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "cards",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _config.IMG_CDN_URL) + cloudinaryImageId,
+                alt: "restrurnt image",
+                id: "img"
+            }, void 0, false, {
+                fileName: "src/components/Cards.js",
+                lineNumber: 11,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/Cards.js",
+                lineNumber: 12,
+                columnNumber: 11
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: cuisines.join(",")
+            }, void 0, false, {
+                fileName: "src/components/Cards.js",
+                lineNumber: 13,
+                columnNumber: 11
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: [
+                    avgRating,
+                    " Stars"
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Cards.js",
+                lineNumber: 14,
+                columnNumber: 11
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Cards.js",
+        lineNumber: 10,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Card;
+exports.default = Card;
+var _c;
+$RefreshReg$(_c, "Card");
+
+  $parcel$ReactRefreshHelpers$1709.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../config":"jtCLN","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Footer"
+    }, void 0, false, {
+        fileName: "src/components/Footer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34169,30 +34213,34 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _header = require("./Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
 const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        id: "About",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "About us Page"
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 3,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Namaste React Live Course Page"
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 4,
-                columnNumber: 9
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/About.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            id: "About",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    children: "About us Page"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 6,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    children: "Namaste React Live Course Page"
+                }, void 0, false, {
+                    fileName: "src/components/About.js",
+                    lineNumber: 7,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/About.js",
+            lineNumber: 5,
+            columnNumber: 5
+        }, undefined)
+    }, void 0, false);
 };
 _c = About;
 exports.default = About;
@@ -34204,7 +34252,7 @@ $RefreshReg$(_c, "About");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Header":"hsJbF"}],"kvula":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -34214,15 +34262,35 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
 const Error = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: "Error"
-    }, void 0, false, {
-        fileName: "src/components/Error.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
+    _s();
+    const err = (0, _reactRouterDom.useRouteError)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Error"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 5,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: err.status + ":" + err.statusText
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 6,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true);
 };
+_s(Error, "U5GmGaAmh0j0MVy+E8WdBnjlm7s=", false, function() {
+    return [
+        (0, _reactRouterDom.useRouteError)
+    ];
+});
 _c = Error;
 exports.default = Error;
 var _c;
@@ -34233,6 +34301,35 @@ $RefreshReg$(_c, "Error");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["hklly","1xC6H","bNKaB"], "bNKaB", "parcelRequire5906")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"3ay3w":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b3d5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b3d5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Contact = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "Contact me"
+    }, void 0, false, {
+        fileName: "src/components/Contacts.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$b3d5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["hklly","1xC6H","bNKaB"], "bNKaB", "parcelRequire5906")
 
 //# sourceMappingURL=index.0641b553.js.map
