@@ -13,15 +13,24 @@ const Header=()=>{
             <Title />
             <div id="headercomponents">
                 <ul>
+                <li>
+                    <Link to = '/'>
                     <li>Home</li>
+                    </Link>
+                    </li>
                     <li>
                     <Link to = '/about'>
                     <li>About</li>
                     </Link>
                     </li>
-                    
-                    
+                    <li>
+                    <Link to = '/contact'>
                     <li>Contact</li>
+                    </Link>
+                    </li>
+                    
+                    
+                    
                     <li>Cart</li>
                 </ul>
             </div>

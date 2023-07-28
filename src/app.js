@@ -7,6 +7,7 @@ import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 import About from "./components/About.js"
 import Error from "./components/Error"
 import Contact from "./components/Contacts"
+import Restaurentmenu from "./components/Restaurentmenu"
 
 
 
@@ -48,6 +49,12 @@ const approuter=createBrowserRouter([
             path:"/",
             element:<Body />,
              errorElement:<Error />
+        },
+        {
+            path:"/restrurent/:id",
+            element:<Restaurentmenu />,
+             errorElement:<Error />
+
         }
     ]
 
