@@ -4,10 +4,11 @@ import Card from "./Cards"
 // make a filter function 
 // This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
 //  after that we are filter function which filter on the basis of searchtxt from restaurents.data.name and then return the filter data 
+//  with the help of this we are going to make search bar working
 function filter(searchtxt,allrestarurent){
 
 const filterdata = allrestarurent.filter((restaurant) =>
-restaurant?.data?.name?.toLowerCase()?.includes(searchtxt.toLowerCase())
+restaurant?.info.name.toLowerCase()?.includes(searchtxt.toLowerCase())
 );
 return filterdata;
 }
@@ -17,6 +18,7 @@ return filterdata;
 const Body = () =>{
 
     //  here we kept two copy of restrurent list
+    //  one is list of all restrurent an dother one 
     const [allrestarurent,setallrestaurent]=useState([]);
     //  here we are creating state variable 
     const [filterdrestaurants,setFilteredrestaurants]= useState(restrurentlist)
@@ -30,16 +32,27 @@ const Body = () =>{
  
  //  below function is for api call as we are using Swiggy public api for fetching data
     async function getRestrurent(){
-        const data=await fetch(
+        let data=await fetch(
         
-            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6691565&lng=77.45375779999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-
+            "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
        )
-       const json=await data.json();
+
+       const json = await data.json();
        console.log(json)
     //    opetional chaining
-//     setallrestaurent(json?.data?.cards[2]?.data?.data?.cards);
-//    setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
+//   setallrestaurent(json?.data?.cards[0]?.data?.data?.cards);
+  
+    // setNoOfRestaurant(da?.data?.cards[2]?.data?.data?.totalRestaurants);
+    // Optional Chaining
+    setallrestaurent(
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      );
+      setFilteredrestaurants(
+        json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      );
+    
+
+//     setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
 
     }
     console.log(filterdrestaurants)
@@ -56,8 +69,7 @@ const Body = () =>{
         }
       };
 
-
-    return (
+      return (
         <>
         <div className="search">
             {/* we have use a on change method so that search tect will change according the input that we have given ans e.target.value is the value that we have type in input box */}
@@ -94,8 +106,9 @@ const Body = () =>{
 
 
             ):(
-                filterdrestaurants.map(restaurant =>{
-                    return   <Card {...restaurant.data} key={restaurant.data.id}/>
+                filterdrestaurants?.map(restaurant =>{
+                    
+                    return   <Card {...restaurant?.info} key={restaurant?.info?.id}/>
                     
             
                     })

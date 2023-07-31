@@ -33405,14 +33405,16 @@ var _s = $RefreshSig$();
 // make a filter function 
 // This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
 //  after that we are filter function which filter on the basis of searchtxt from restaurents.data.name and then return the filter data 
+//  with the help of this we are going to make search bar working
 function filter(searchtxt, allrestarurent) {
-    const filterdata = allrestarurent.filter((restaurant)=>restaurant?.data?.name?.toLowerCase()?.includes(searchtxt.toLowerCase()));
+    const filterdata = allrestarurent.filter((restaurant)=>restaurant?.info.name.toLowerCase()?.includes(searchtxt.toLowerCase()));
     return filterdata;
 }
 // now we write code for body
 const Body = ()=>{
     _s();
     //  here we kept two copy of restrurent list
+    //  one is list of all restrurent an dother one 
     const [allrestarurent, setallrestaurent] = (0, _react.useState)([]);
     //  here we are creating state variable 
     const [filterdrestaurants, setFilteredrestaurants] = (0, _react.useState)((0, _config.restrurentlist));
@@ -33423,12 +33425,16 @@ const Body = ()=>{
     }, []);
     //  below function is for api call as we are using Swiggy public api for fetching data
     async function getRestrurent() {
-        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6691565&lng=77.45375779999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        let data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         console.log(json);
-    //    opetional chaining
-    //     setallrestaurent(json?.data?.cards[2]?.data?.data?.cards);
-    //    setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        //    opetional chaining
+        //   setallrestaurent(json?.data?.cards[0]?.data?.data?.cards);
+        // setNoOfRestaurant(da?.data?.cards[2]?.data?.data?.totalRestaurants);
+        // Optional Chaining
+        setallrestaurent(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredrestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    //     setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
     }
     console.log(filterdrestaurants);
     //  heare we have create a handle search which chech if search text is empty then it shows no result fount
@@ -33454,7 +33460,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 51,
+                        lineNumber: 59,
                         columnNumber: 8
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -33463,13 +33469,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 54,
+                        lineNumber: 62,
                         columnNumber: 8
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 49,
+                lineNumber: 57,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -33478,15 +33484,15 @@ const Body = ()=>{
                     children: "No Result Found"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 69,
+                    lineNumber: 77,
                     columnNumber: 48
-                }, undefined) : filterdrestaurants.map((restaurant)=>{
+                }, undefined) : filterdrestaurants?.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _react.createElement)((0, _cardsDefault.default), {
-                        ...restaurant.data,
-                        key: restaurant.data.id,
+                        ...restaurant?.info,
+                        key: restaurant?.info?.id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 70,
+                            lineNumber: 78,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -33494,7 +33500,7 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 67,
+                lineNumber: 75,
                 columnNumber: 9
             }, undefined)
         ]
@@ -34182,7 +34188,7 @@ const Card = ({ name, cuisines, cloudinaryImageId, avgRating })=>{
                 columnNumber: 11
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: cuisines.join(",")
+                children: cuisines?.join(",")
             }, void 0, false, {
                 fileName: "src/components/Cards.js",
                 lineNumber: 13,
