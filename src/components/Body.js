@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { restrurentlist } from "../config"
 import Card from "./Cards"
+import { Link } from "react-router-dom";
 // make a filter function 
 // This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
 //  after that we are filter function which filter on the basis of searchtxt from restaurents.data.name and then return the filter data 
@@ -108,7 +109,7 @@ const Body = () =>{
             ):(
                 filterdrestaurants?.map(restaurant =>{
                     
-                    return   <Card {...restaurant?.info} key={restaurant?.info?.id}/>
+                    return  <Link to={"/restrurent/"+ restaurant?.info?.id} key={restaurant?.info?.id}><Card {...restaurant?.info} /></Link> 
                     
             
                     })

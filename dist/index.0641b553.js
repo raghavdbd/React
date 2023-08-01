@@ -33401,6 +33401,7 @@ var _react = require("react");
 var _config = require("../config");
 var _cards = require("./Cards");
 var _cardsDefault = parcelHelpers.interopDefault(_cards);
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 // make a filter function 
 // This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
@@ -33460,7 +33461,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 59,
+                        lineNumber: 60,
                         columnNumber: 8
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -33469,13 +33470,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 62,
+                        lineNumber: 63,
                         columnNumber: 8
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 57,
+                lineNumber: 58,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -33484,23 +33485,27 @@ const Body = ()=>{
                     children: "No Result Found"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 77,
+                    lineNumber: 78,
                     columnNumber: 48
                 }, undefined) : filterdrestaurants?.map((restaurant)=>{
-                    return /*#__PURE__*/ (0, _react.createElement)((0, _cardsDefault.default), {
-                        ...restaurant?.info,
-                        key: restaurant?.info?.id,
-                        __source: {
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/restrurent/" + restaurant?.info?.id,
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardsDefault.default), {
+                            ...restaurant?.info
+                        }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 78,
-                            columnNumber: 16
-                        },
-                        __self: undefined
-                    });
+                            lineNumber: 79,
+                            columnNumber: 92
+                        }, undefined)
+                    }, restaurant?.info?.id, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 79,
+                        columnNumber: 16
+                    }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 75,
+                lineNumber: 76,
                 columnNumber: 9
             }, undefined)
         ]
@@ -33517,7 +33522,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../config":"jtCLN","./Cards":"9rJEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jtCLN":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../config":"jtCLN","./Cards":"9rJEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"jtCLN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
@@ -34387,25 +34392,75 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
+var _config = require("../config");
 var _s = $RefreshSig$();
 const menu = ()=>{
     _s();
+    const [restaurant, setrestaurent] = (0, _react.useState)("");
     // how to read a dynamic url params
     const params = (0, _reactRouterDom.useParams)();
     const { id } = params;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+    (0, _react.useEffect)(()=>{
+        getrestaurentinfo();
+    }, []);
+    async function getrestaurentinfo() {
+        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=" + id + "&catalog_qa=undefined&submitAction=ENTER");
+        const json = await data.json();
+        console.log(json.data);
+        console.log(json.data.cards[0].card.card.info);
+        setrestaurent(json.data.cards[0].card.card.info);
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            "Namanste:",
-            id
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _config.IMG_CDN_URL) + restaurant.cloudinaryImageId,
+                alt: ""
+            }, void 0, false, {
+                fileName: "src/components/Restaurentmenu.js",
+                lineNumber: 23,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: restaurant.name
+            }, void 0, false, {
+                fileName: "src/components/Restaurentmenu.js",
+                lineNumber: 24,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: restaurant.avgRating
+            }, void 0, false, {
+                fileName: "src/components/Restaurentmenu.js",
+                lineNumber: 25,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: restaurant.city
+            }, void 0, false, {
+                fileName: "src/components/Restaurentmenu.js",
+                lineNumber: 26,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: restaurant.costForTwoMessage
+            }, void 0, false, {
+                fileName: "src/components/Restaurentmenu.js",
+                lineNumber: 27,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                children: restaurant.cuisines?.join(",")
+            }, void 0, false, {
+                fileName: "src/components/Restaurentmenu.js",
+                lineNumber: 28,
+                columnNumber: 5
+            }, undefined)
         ]
-    }, void 0, true, {
-        fileName: "src/components/Restaurentmenu.js",
-        lineNumber: 8,
-        columnNumber: 10
-    }, undefined);
+    }, void 0, true);
 };
-_s(menu, "+jVsTcECDRo3yq2d7EQxlN9Ixog=", false, function() {
+_s(menu, "nJCY/VrByuSWqddqc6OsRPvIHyA=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
@@ -34417,6 +34472,6 @@ exports.default = menu;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}]},["hklly","1xC6H","bNKaB"], "bNKaB", "parcelRequire5906")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","react":"21dqq","../config":"jtCLN"}]},["hklly","1xC6H","bNKaB"], "bNKaB", "parcelRequire5906")
 
 //# sourceMappingURL=index.0641b553.js.map
