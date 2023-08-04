@@ -1,25 +1,17 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { IMG_CDN_URL } from "../config";
+import useResturant from "../utils/useResturant";
 
 const menu =() =>{
-    const [restaurant,setrestaurent]=useState("");
+ 
     // how to read a dynamic url params
  const params=useParams();
  const {id}=params
+//   we have create a restaurent  custom hook to fetcth data
+ const restaurant=  useResturant(id)
 
- useEffect(() =>{
-  getrestaurentinfo();
-
- },[])
- async function getrestaurentinfo(){
-    const data= await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId="+id+"&catalog_qa=undefined&submitAction=ENTER");
-    const json= await data.json();
-    console.log(json.data)
-    console.log(json.data.cards[0].card.card.info)
-    setrestaurent(json.data.cards[0].card.card.info)
-
- }
+ 
     return (
         <>
 

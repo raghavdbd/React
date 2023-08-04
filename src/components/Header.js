@@ -32,6 +32,9 @@ const Header=()=>{
                     
                     
                     <li>Cart</li>
+                    <Link to = '/instamart'>
+                    <li>Instamart</li>
+                    </Link>
                 </ul>
             </div>
         </div>

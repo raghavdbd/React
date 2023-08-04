@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy,Suspense } from "react";
 import ReactDOM from "react-dom/client"
 import Header from "./components/Header"
 import Body from"./components/Body"
@@ -8,6 +8,12 @@ import About from "./components/About.js"
 import Error from "./components/Error"
 import Contact from "./components/Contacts"
 import Restaurentmenu from "./components/Restaurentmenu"
+
+
+//  this is old way of doing import now we do lazy loading so for that
+// import Instamart from "./components/instamart"
+
+const Instamart=lazy(()=> import("./components/instamart"))
 
 
 
@@ -53,6 +59,12 @@ const approuter=createBrowserRouter([
         {
             path:"/restrurent/:id",
             element:<Restaurentmenu />,
+             errorElement:<Error />
+
+        },
+        {
+            path:"/instamart",
+            element:<Suspense><Instamart /></Suspense>,
              errorElement:<Error />
 
         }

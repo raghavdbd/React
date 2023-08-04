@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { restrurentlist } from "../config"
 import Card from "./Cards"
 import { Link } from "react-router-dom";
+import useonline from "../utils/useonline";
 // make a filter function 
 // This function help us in filtering the searchtxt in this we are passing searchtxt na dlist of resturents
 //  after that we are filter function which filter on the basis of searchtxt from restaurents.data.name and then return the filter data 
@@ -56,6 +57,14 @@ const Body = () =>{
 //     setFilteredrestaurants(json?.data?.cards[2]?.data?.data?.cards);
 
     }
+   
+   
+    //  we have create a hook weather we are ofline or online
+    const isonline = useonline();
+    if(!isonline){
+      <h1>Oops Something went rwrong pls check your internet connection</h1>
+    }
+
     console.log(filterdrestaurants)
    
     //  heare we have create a handle search which chech if search text is empty then it shows no result fount
