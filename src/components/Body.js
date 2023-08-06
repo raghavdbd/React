@@ -81,7 +81,7 @@ const Body = () =>{
 
       return (
         <>
-        <div className="search">
+        <div className="p-2 outline-black m-5">
             {/* we have use a on change method so that search tect will change according the input that we have given ans e.target.value is the value that we have type in input box */}
        <input type="text" placeholder="Search" value={searchtxt}
        onChange={(e)=>{
@@ -91,7 +91,7 @@ const Body = () =>{
        }}
        
        />
-       <button className="Search-btn"
+       <button className="p-2 m-2 bg-sky-500 hover:bg-sky-700 rounded-2xl"
        onClick={handleSearch}
         //  we need to filter the data
         //  in this what we are doing that we have create a data variable 
@@ -109,7 +109,7 @@ const Body = () =>{
 
         </div>
       
-        <div id="Restrurent">
+        <div className="flex flex-wrap">
           
             {filterdrestaurants.length ===0 ?(
                 <p>No Result Found</p>
