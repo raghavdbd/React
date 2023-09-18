@@ -3,6 +3,7 @@ we can import React using cdn
 tilde and caret
 npx means npm execute
    <<<<  parcel features   >>>>>
+parcel is a web application bundler
 
 parcel is hot module reload(parcel keep a track of all the file) it does not reload the whole code it only changes those which need to be change
 there is something knoen as file watcher algorithm this is written c++
